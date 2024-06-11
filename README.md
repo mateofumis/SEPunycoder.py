@@ -42,3 +42,7 @@ The author is not liable for any misuse of the content within this repository.
 Users are advised to use the scripts responsibly and in compliance with all applicable laws and regulations.
 
 Thank you for your understanding and commitment to responsible use of the resources provided.
+
+## 🧡 Support me with a virtual Coffee! 🧡
+
+<a href='https://ko-fi.com/L4L5Z62NT' target='_blank'><img height='70' style='border:0px;height:70px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
