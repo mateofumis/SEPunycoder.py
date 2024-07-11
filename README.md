@@ -27,6 +27,43 @@ $: ./sepunycoder.py
 👀 Translated text: https://раураl.соm/lоgin
 ```
 
+# 🎯 Proof of Concept - Demonstration
+
+![proof_of_concept.png](proof_of_concept.png)
+
+- Code Snippet
+
+```bash
+# From Punycode String (IDNA) to ASCII
+$: echo -n 'https://раураl.соm/lоgin' | idn -a
+xn--https://l-7yha4qb5b.xn--m/lgin-vqfdw
+
+# From Punycode String (IDNA/ASCII) to Unicode
+$: echo -n 'xn--https://l-7yha4qb5b.xn--m/lgin-vqfdw' | idn -u
+https://раураl.соm/lоgin
+
+# When DNS try to resolve the host (Punycode String)
+$: curl -I -X GET https://раураl.соm/lоgin
+curl: (6) Could not resolve host: xn--l-7sba6dbr.xn--m-0tbi
+```
+
++ Useful Documentation: [https://www.icann.org/resources/pages/idn-2012-02-25-en](https://www.icann.org/resources/pages/idn-2012-02-25-en)
++ Note: `idn` command is from [Libidn](https://www.gnu.org/software/libidn/)
+
+# 🤺 Utility in Social Engineering
+
+> "Punycode is a way to represent Unicode with the limited character subset of ASCII supported by the Domain Name System (DNS)".
+
+Therefore this tool can be used for Social Engineering Attacks in the following scenarios:
+
+- Email Spoofing: Crafting email addresses that closely mimic those of trusted individuals or organizations using Punycode.
+
+- Fake Website Creation: Register domain names containing Punycode characters to replicate well-known websites.
+
+- Social Media Impersonation: Creation of Social Media profiles that impersonate genuine individuals or organizations.
+
+- Phishing campaigns: Generate phishing links with Punycode-encoded domain names so that victim click on seemingly authentic links.
+
 ## ⚠️ DISCLAIMER
 
 This repository is intended for educational purposes only. 
